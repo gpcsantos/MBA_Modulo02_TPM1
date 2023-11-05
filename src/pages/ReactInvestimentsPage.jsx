@@ -31,12 +31,11 @@ export default function ReactInvestimentsPage() {
           let percent = 0;
           let textColor = "black";
           if (yeld >= 0) {
-            percent = firstValue / lastValue;
             textColor = `text-green-600`;
           } else {
-            percent = lastValue / firstValue - 1;
             textColor = `text-red-600`;
           }
+          percent = lastValue / firstValue - 1;
 
           return (
             <Investiments key={getNewId()}>
